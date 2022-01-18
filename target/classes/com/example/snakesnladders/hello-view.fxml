@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #52ffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.snakesnladders.HelloController">
+   <children>
+      <ImageView fx:id="board" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true">
+         <image>
+            <Image url="@board3.jpeg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Button fx:id="blueToken" layoutX="14.0" layoutY="534.0" mnemonicParsing="false" onAction="#showBlue" style="-fx-background-color: Blue;">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="redToken" layoutX="53.0" layoutY="534.0" mnemonicParsing="false" onAction="#showRed" style="-fx-background-color: red;">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="Dice" cache="true" layoutX="687.0" layoutY="445.0" mnemonicParsing="false" onAction="#rollDice" text="Dice">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.13177387416362762" green="0.5473684072494507" blue="0.3534243106842041" />
+               </color>
+            </DropShadow>
+         </effect></Button>
+      <Label fx:id="CompRollLabel" layoutX="583.0" layoutY="449.0" text="compRoll" textFill="RED" />
+      <Label fx:id="status" layoutX="601.0" layoutY="233.0" text="Start the game" textAlignment="CENTER" textFill="BLUE">
+         <effect>
+            <Glow />
+         </effect></Label>
+      <ImageView fx:id="dieFace" fitHeight="100.0" fitWidth="100.0" layoutX="727.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow />
+         </effect></ImageView>
+      <ImageView fx:id="dieFace1" fitHeight="100.0" fitWidth="100.0" layoutX="583.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow />
+         </effect></ImageView>
+      <Label fx:id="UserRollLabel" layoutX="756.0" layoutY="449.0" text="userRoll" textFill="BLUE" />
+      <Button layoutX="424.0" layoutY="584.0" mnemonicParsing="false" onAction="#start" text="Start/Start again" textFill="#07128c">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Label fx:id="Label" layoutX="115.0" layoutY="624.0" />
+   </children>
+</Pane>
